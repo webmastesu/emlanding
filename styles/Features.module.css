@@ -1,0 +1,25 @@
+/* Features.module.css */
+.features {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #fff;
+  }
+  
+  .features h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .features ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .features li {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+  }
+  

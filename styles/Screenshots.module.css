@@ -1,0 +1,19 @@
+/* Screenshots.module.css */
+.screenshots {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+  }
+  
+  .screenshots h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .screenshots img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+  }
+  

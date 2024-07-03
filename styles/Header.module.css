@@ -1,0 +1,152 @@
+/* Header.module.css */
+
+.header {
+  display: flex;
+  justify-content: space-between; /* Centered logo and menu */
+  align-items: center;
+  padding: 1rem;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  margin-right: 2rem; /* Adjust margin to create space between logo and menu */
+}
+
+.logoImg {
+  width: 80px; /* Adjust logo size as needed */
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.navLinks {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li {
+  margin: 0 1rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.header.scrolled {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header.scrolled .navLink {
+  color: #000;
+}
+
+.mobileMenuToggle {
+  display: none; /* Hide initially on desktop view */
+}
+
+@media (max-width: 768px) {
+  .logo {
+    margin-right: auto; /* Move logo to the left */
+  }
+
+  .logoImg {
+    width: 60px; /* Adjust smaller logo size for mobile view */
+  }
+
+  .menu {
+    position: relative;
+  }
+
+  .mobileMenuToggle {
+    display: block; /* Show on mobile view */
+    cursor: pointer;
+    padding: 0.5rem;
+    position: absolute; /* Position absolute to move to right side */
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1rem; /* Adjust right spacing as needed */
+    color: red; /* Change color to red */
+    z-index: 1100; /* Ensure it's above the menu */
+  }
+
+  .menuIcon {
+    width: 25px;
+    height: 20px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .menuIcon .menuLine {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .menuIcon .menuLine:nth-child(1) {
+    top: 0;
+  }
+
+  .menuIcon .menuLine:nth-child(2),
+  .menuIcon .menuLine:nth-child(3) {
+    top: 9px;
+  }
+
+  .menuIcon .menuLine:nth-child(3) {
+    top: 18px;
+  }
+
+  .navLinks {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Background color for mobile menu */
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateX(100%); /* Initially off-screen */
+    visibility: hidden;
+    opacity: 0;
+    width: 80%; /* Adjust width as needed */
+    max-width: 300px; /* Limit maximum width of the menu */
+    overflow-y: auto; /* Enable scrolling if menu exceeds screen height */
+    max-height: calc(100vh - 60px); /* Limit menu height to viewport height minus header height */
+    z-index: 1050; /* Ensure it's above header but below modal dialogs */
+    color: #000; /* Text color for mobile menu */
+  }
+
+  .navLinks.open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0); /* Slide in from right */
+  }
+
+  .navLinks li {
+    margin: 0.5rem 0;
+  }
+
+  .navLinks .navLink {
+    color: #000; /* Ensure text color is black */
+  }
+}

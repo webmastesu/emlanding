@@ -1,0 +1,25 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #0070f3;
+    color: #fff;
+  }
+  
+  .footer nav {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .footerLink {
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .footerLink:hover {
+    background-color: #005bb5;
+    border-radius: 5px;
+  }
+  

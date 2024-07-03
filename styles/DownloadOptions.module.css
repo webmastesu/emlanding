@@ -1,0 +1,67 @@
+.download {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.download h2 {
+  margin-bottom: 1rem;
+}
+
+.download .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.download button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #0070f3;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cube {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: transform 1s;
+}
+
+.face {
+  position: absolute;
+  width: 300px; /* Should match the cube size */
+  height: 300px; /* Should match the cube size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden; /* Hides the back face when rotated */
+}
+
+.face img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensures images maintain aspect ratio */
+}
+
+.front {
+  transform: translateZ(150px); /* Half of cube's width */
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(150px);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(150px);
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(150px);
+}

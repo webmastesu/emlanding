@@ -1,0 +1,124 @@
+/* HeroSection.module.css */
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url('https://4kwallpapers.com/images/walls/thumbs_3t/15859.jpg') no-repeat center center/cover;
+  background-size: cover; /* Ensure the background covers the entire area */
+  color: #fff;
+  text-align: center;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  animation: disintegrateBackground 10s linear infinite; /* Animation for background disintegration */
+}
+
+/* Overlay gradient */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); /* Adjust transparency and colors as needed */
+}
+
+.heroContent {
+  max-width: 90%; /* Adjust to maintain readability on smaller screens */
+  padding: 2rem;
+  margin-top: 30vh; /* Move content down by 30% of viewport height */
+}
+
+.hero h1 {
+  font-size: 2rem; /* Decrease font size for smaller screens */
+  margin-bottom: 1rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem; /* Decrease font size for smaller screens */
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1rem; /* Decrease font size for smaller screens */
+  margin-bottom: 2rem;
+}
+
+.heroButtons {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 1rem; /* Adjust spacing between buttons */
+}
+
+.heroButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #3E787F;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+  box-shadow: 0 0 5px #3E787F, 0 0 10px #3E787F, 0 0 20px #3E787F, 0 0 40px #3E787F;
+}
+
+.heroButton::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border: 2px solid #0f0;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0, 0 0 40px #0f0;
+}
+
+.heroButton:hover::before {
+  opacity: 1;
+}
+
+@keyframes disintegrateBackground {
+  0% {
+    filter: grayscale(0%);
+  }
+  50% {
+    filter: grayscale(50%);
+  }
+  100% {
+    filter: grayscale(100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroContent {
+    padding: 1rem; /* Adjust padding for smaller screens */
+    margin-top: 20vh; /* Further decrease margin-top for mobile */
+  }
+
+  .hero h1 {
+    font-size: 1.5rem; /* Further decrease font size for mobile */
+  }
+
+  .hero h2 {
+    font-size: 2rem; /* Further decrease font size for mobile */
+  }
+
+  .hero p {
+    font-size: 0.875rem; /* Further decrease font size for mobile */
+  }
+
+  .heroButtons {
+    flex-direction: column; /* Stack buttons vertically on mobile */
+  }
+
+  .heroButton {
+    width: 100%; /* Full width for buttons on mobile */
+  }
+}
