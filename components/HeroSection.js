@@ -13,8 +13,8 @@ const HeroSection = () => (
         Anime and 18+ right now.
       </p>
       <div className={styles.heroButtons}>
-        <a href="/download" className={styles.heroButton}>Download</a>
-        <a href="/help" className={styles.heroButton}>Help</a>
+        <a href="https://109110.b-cdn.net/Em-Latest.apk" className={styles.heroButton}>Download</a>
+        <a href="https://t.me/eternalxemcoinsbot" className={styles.heroButton}>Help</a>
       </div>
     </div>
   </section>
