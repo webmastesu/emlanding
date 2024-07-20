@@ -1,5 +1,3 @@
-// HeroSection.js
-
 import React from 'react';
 import styles from '../styles/HeroSection.module.css';
 
@@ -13,11 +11,23 @@ const HeroSection = () => (
         Anime and 18+ right now.
       </p>
       <div className={styles.heroButtons}>
-        <a href="https://109110.b-cdn.net/Em-Latest.apk" className={styles.heroButton}>Download</a>
-        <a href="https://t.me/eternalxemcoinsbot" className={styles.heroButton}>Help</a>
+        <a
+          href="https://109110.b-cdn.net/Em-Latest.apk"
+          className={styles.heroButton}
+          download
+        >
+          Download
+        </a>
+        <a
+          href="https://t.me/eternalxemcoinsbot"
+          className={styles.heroButton}
+        >
+          Help
+        </a>
       </div>
     </div>
   </section>
 );
 
 export default HeroSection;
+
